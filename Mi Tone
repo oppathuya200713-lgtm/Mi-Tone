@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mi Tun Lay 💜</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#c77dff,#ffafcc);
+    font-family:sans-serif;
+    overflow:hidden;
+}
+
+.box{
+    width:85%;
+    max-width:420px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px #555;
+    z-index:5;
+}
+
+h1{
+    color:#9d4edd;
+}
+
+#text{
+    color:#444;
+    line-height:1.8;
+    font-size:17px;
+    min-height:230px;
+}
+
+button{
+    background:#9d4edd;
+    color:white;
+    border:0;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:16px;
+}
+
+.heart{
+    position:absolute;
+    top:-20px;
+    font-size:25px;
+    animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>💜 မိတုန်လေးရေ 💜</h1>
+
+<p id="text">
+ဒီစာလေးကို ဝင်ဖတ်ပေးပါနော် ❤️
+</p>
+
+<button onclick="showLove()">ဖတ်မယ် 💌</button>
+</div>
+
+
+<script>
+
+let message = `
+မိတုန်လေးရေ... ❤️
+
+ကို အများကြီးချစ်တယ် ကလေးလေးရေ။
+
+ကို့အချစ်တွေကို သက်သေပြမှာပါ။
+အရင်လိုပဲ ပျော်ရွှင်နေပါနော် မိတုန်လေးရေ။
+
+စာတွေလည်း သေချာလုပ်ပါနော်။
+ကို့ကြောင့် စိတ်ညစ်စေမိလို့ တောင်းပန်ပါတယ်ဗျ။
+
+အသက်ဆုံးတဲ့အထိ လက်တွဲသွားချင်တယ်
+မိတုန်လေးရယ်။
+
+ကို အရာရာ ပြင်မှာပါဗျ။
+နောက် စိတ်မညစ်စေရပါဘူးနော်။
+
+စာကို အာရုံစိုက်ပါ ကလေးလေးရေ။
+
+လပ်ယူကလေးလေး...
+ကိုတို့ရဲ့ အမှတ်တရအကောင်းဆုံးတွေနဲ့
+ရှေ့ဆက်ကြမယ်နော် 💜
+`;
+
+function showLove(){
+    let i=0;
+    document.getElementById("text").innerHTML="";
+
+    let timer=setInterval(()=>{
+        document.getElementById("text").innerHTML += message[i];
+        i++;
+
+        if(i>=message.length){
+            clearInterval(timer);
+        }
+    },45);
+}
+
+
+function makeHeart(){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="💜";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(3+Math.random()*3)+"s";
+
+    document.body.appendChild(h);
+
+    setTimeout(()=>{
+        h.remove();
+    },6000);
+}
+
+setInterval(makeHeart,300);
+
+</script>
+
+</body>
+</html>
