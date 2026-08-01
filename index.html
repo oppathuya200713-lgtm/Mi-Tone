@@ -1,0 +1,134 @@
+ရပါတယ်ဗျ ❤️ ဒီ Code ကို အကုန် Copy လုပ်ပြီး `index.html` ထဲ Paste လုပ်ပါ။ မိတုန်လေး စိတ်ပြေစေဖို့ နူးညံ့တဲ့ Version လုပ်ထားပါတယ်။
+
+```html
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Mi Tun Lay ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffc3a0,#ffafbd);
+    font-family:sans-serif;
+    overflow:hidden;
+}
+
+.card{
+    width:85%;
+    max-width:400px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#ff4d6d;
+}
+
+p{
+    color:#555;
+    line-height:1.8;
+    font-size:17px;
+}
+
+button{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    font-size:25px;
+    animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-50px);
+    }
+    to{
+        transform:translateY(100vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>💖 မိတုန်လေး 💖</h1>
+
+<p id="msg">
+Button လေးနှိပ်ကြည့်ပါနော် ❤️
+</p>
+
+<button onclick="openMsg()">ဖွင့်မယ် 💌</button>
+
+</div>
+
+<script>
+
+function openMsg(){
+
+document.getElementById("msg").innerHTML =
+`
+မိတုန်လေးရေ ❤️<br><br>
+
+ဒီနေ့ မင်းစိတ်မကောင်းဖြစ်နေတာ သိတယ်။<br>
+ဘာကြောင့်မှန်း မသိပေမယ့်<br>
+မင်းခံစားချက်ကို ငါဂရုစိုက်ပါတယ်။<br><br>
+
+ငါ့ကြောင့် စိတ်မကောင်းဖြစ်သွားရင်<br>
+တောင်းပန်ပါတယ်နော်။<br><br>
+
+မင်းစိတ်ပြေပြီး ပြုံးနိုင်ဖို့ပဲ<br>
+ငါလိုချင်တယ်။ 🌸<br><br>
+
+အမြဲဂရုစိုက်နေမယ် ❤️
+`;
+
+}
+
+function heart(){
+
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+h.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+
+}
+
+setInterval(heart,300);
+
+</script>
+
+</body>
+</html>
+```
+
+Paste လုပ်ပြီး **Commit changes** နှိပ်လိုက်ပါဗျ။
+
+ပြီးသွားရင် ပြောပါ၊ နောက်တစ်ဆင့် **Link ထုတ်ပြီး မိတုန်လေးဆီ ပို့နည်း** ဆက်လုပ်ပေးမယ် ❤️
